@@ -29,7 +29,7 @@ export function GearTable() {
   };
 
   const getBorderClass = (bis: boolean) => {
-    return bis ? "border-4 border-green-500" : "";
+    return bis ? "border-4 border-green-200" : "";
   };
 
   const sortedData = useMemo(() => {

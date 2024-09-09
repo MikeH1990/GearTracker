@@ -2,18 +2,18 @@ export default [
   {
     Slot: "Back",
     Dungeon: "Ara-Kara, City of Echoes",
-    BIS: false,
+    BIS: true,
     class: "all",
   },
-  { Slot: "Back", Dungeon: "The Stonevault", BIS: false, class: "all" },
+  { Slot: "Back", Dungeon: "The Stonevault", BIS: true, class: "warrior" },
   { Slot: "Back", Dungeon: "Grim Batol", BIS: false, class: "all" },
   { Slot: "Back", Dungeon: "Grim Batol", BIS: false, class: "all" },
   { Slot: "Back", Dungeon: "Grim Batol", BIS: false, class: "all" },
   {
     Slot: "Finger",
     Dungeon: "City of Threads",
-    BIS: false,
-    class: "all",
+    BIS: true,
+    class: "shaman",
   },
   {
     Slot: "Finger",
@@ -24,14 +24,14 @@ export default [
   {
     Slot: "Finger",
     Dungeon: "The Dawnbreaker",
-    BIS: false,
-    class: "all",
+    BIS: true,
+    class: "DK",
   },
   {
     Slot: "Finger",
     Dungeon: "The Necrotic Wake",
-    BIS: false,
-    class: "all",
+    BIS: true,
+    class: "shaman",
   },
   {
     Slot: "Finger",
@@ -52,16 +52,16 @@ export default [
     class: "all",
   },
   { Slot: "Finger", Dungeon: "Grim Batol", BIS: false, class: "all" },
-  { Slot: "Finger", Dungeon: "Grim Batol", BIS: false, class: "all" },
-  { Slot: "Finger", Dungeon: "Grim Batol", BIS: false, class: "all" },
-  { Slot: "Finger", Dungeon: "Grim Batol", BIS: false, class: "all" },
+  { Slot: "Finger", Dungeon: "Grim Batol", BIS: true, class: "DK" },
+  { Slot: "Finger", Dungeon: "Grim Batol", BIS: true, class: "warrior" },
+  { Slot: "Finger", Dungeon: "Grim Batol", BIS: true, class: "warrior" },
   {
     Slot: "Neck",
     Dungeon: "City of Threads",
-    BIS: false,
+    BIS: true,
     class: "all",
   },
-  { Slot: "Neck", Dungeon: "The Stonevault", BIS: false, class: "all" },
+  { Slot: "Neck", Dungeon: "The Stonevault", BIS: true, class: "warrior" },
   {
     Slot: "Neck",
     Dungeon: "Mists of Tirna Scithe",
@@ -107,7 +107,7 @@ export default [
   {
     Slot: "Axe",
     Dungeon: "Mists of Tirna Scithe",
-    BIS: false,
+    BIS: true,
     class: "DK",
   },
   {
@@ -122,11 +122,11 @@ export default [
     BIS: false,
     class: "DK",
   },
-  { Slot: "Mace", Dungeon: "Grim Batol", BIS: false, class: "DK" },
+  { Slot: "Mace", Dungeon: "Grim Batol", BIS: true, class: "warrior" },
   {
     Slot: "Staff",
     Dungeon: "City of Threads",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
@@ -145,7 +145,7 @@ export default [
   {
     Slot: "Dagger",
     Dungeon: "Ara-Kara, City of Echoes",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
@@ -187,7 +187,7 @@ export default [
   {
     Slot: "Shield",
     Dungeon: "The Necrotic Wake",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
@@ -208,7 +208,7 @@ export default [
     BIS: false,
     class: "shaman",
   },
-  { Slot: "Head", Dungeon: "Grim Batol", BIS: false, class: "shaman" },
+  { Slot: "Head", Dungeon: "Grim Batol", BIS: true, class: "shaman" },
   {
     Slot: "Shoulders",
     Dungeon: "The Dawnbreaker",
@@ -218,7 +218,7 @@ export default [
   {
     Slot: "Shoulders",
     Dungeon: "Mists of Tirna Scithe",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
@@ -246,6 +246,12 @@ export default [
     class: "shaman",
   },
   {
+    Slot: "Chest",
+    Dungeon: "The Dawnbreaker",
+    BIS: true,
+    class: "shaman",
+  },
+  {
     Slot: "Wrist",
     Dungeon: "City of Threads",
     BIS: false,
@@ -260,13 +266,13 @@ export default [
   {
     Slot: "Wrist",
     Dungeon: "Siege of Boralus",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
     Slot: "Hands",
     Dungeon: "Ara-Kara, City of Echoes",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
@@ -296,13 +302,13 @@ export default [
   {
     Slot: "Waist",
     Dungeon: "Siege of Boralus",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
     Slot: "Legs",
     Dungeon: "City of Threads",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
@@ -326,7 +332,7 @@ export default [
   {
     Slot: "Feet",
     Dungeon: "The Dawnbreaker",
-    BIS: false,
+    BIS: true,
     class: "shaman",
   },
   {
@@ -346,14 +352,14 @@ export default [
   {
     Slot: "Head",
     Dungeon: "The Dawnbreaker",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "DK",
   },
   {
     Slot: "Head",
     Dungeon: "Mists of Tirna Scithe",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "warrior",
   },
   {
     Slot: "Head",
@@ -364,8 +370,8 @@ export default [
   {
     Slot: "Shoulders",
     Dungeon: "Ara-Kara, City of Echoes",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "DK",
   },
   {
     Slot: "Shoulders",
@@ -388,28 +394,28 @@ export default [
   {
     Slot: "Shoulders",
     Dungeon: "Grim Batol",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "warrior",
   },
   {
     Slot: "Chest",
     Dungeon: "Ara-Kara, City of Echoes",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "warrior",
   },
   {
     Slot: "Chest",
     Dungeon: "The Dawnbreaker",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "DK",
   },
   {
     Slot: "Wrist",
     Dungeon: "City of Threads",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "DK",
   },
-  { Slot: "Wrist", Dungeon: "Grim Batol", BIS: false, class: "plate" },
+  { Slot: "Wrist", Dungeon: "Grim Batol", BIS: true, class: "warrior" },
   {
     Slot: "Hands",
     Dungeon: "Ara-Kara, City of Echoes",
@@ -425,14 +431,14 @@ export default [
   {
     Slot: "Hands",
     Dungeon: "Mists of Tirna Scithe",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "warrior",
   },
   {
     Slot: "Hands",
     Dungeon: "Siege of Boralus",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "DK",
   },
   {
     Slot: "Waist",
@@ -449,14 +455,14 @@ export default [
   {
     Slot: "Waist",
     Dungeon: "The Necrotic Wake",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "warrior",
   },
   {
     Slot: "Waist",
     Dungeon: "Siege of Boralus",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "DK",
   },
   { Slot: "Waist", Dungeon: "Grim Batol", BIS: false, class: "plate" },
   {
@@ -474,14 +480,14 @@ export default [
   {
     Slot: "Legs",
     Dungeon: "Mists of Tirna Scithe",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "warrior",
   },
   {
     Slot: "Legs",
     Dungeon: "The Necrotic Wake",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "DK",
   },
   {
     Slot: "Legs",
@@ -492,13 +498,13 @@ export default [
   {
     Slot: "Feet",
     Dungeon: "City of Threads",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "warrior",
   },
   {
     Slot: "Feet",
     Dungeon: "Siege of Boralus",
-    BIS: false,
-    class: "plate",
+    BIS: true,
+    class: "DK",
   },
 ];

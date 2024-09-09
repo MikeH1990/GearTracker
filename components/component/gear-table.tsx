@@ -8,7 +8,7 @@ export function GearTable() {
   const [sortDirection, setSortDirection] = useState("asc");
   const data = datas;
 
-  const getClassBackgroundColor = (className) => {
+  const getClassBackgroundColor = (className: any) => {
     switch (className) {
       case "warrior":
         return "bg-slate-300";
@@ -21,7 +21,7 @@ export function GearTable() {
     }
   };
 
-  const getBorderClass = (bis) => {
+  const getBorderClass = (bis: boolean) => {
     return bis ? "border-8 border-yellow-300" : "";
   };
 
@@ -34,7 +34,7 @@ export function GearTable() {
       return 0;
     });
   }, [data, sortColumn, sortDirection]);
-  const handleSort = (column) => {
+  const handleSort = (column: any) => {
     if (column === sortColumn) {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {

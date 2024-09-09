@@ -3,18 +3,25 @@
 import { useState, useMemo } from "react";
 import datas from "../../app/MData.js";
 
-export function GearTable() {
-  const [sortColumn, setSortColumn] = useState("slot");
-  const [sortDirection, setSortDirection] = useState("asc");
-  const data = datas;
+interface GearItem {
+  Slot: string;
+  Dungeon: string;
+  class: string;
+  BIS: boolean;
+}
 
-  const getClassBackgroundColor = (className: any) => {
-    switch (className) {
+export function GearTable() {
+  const [sortColumn, setSortColumn] = useState<keyof GearItem>("Slot");
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
+  const data: GearItem[] = datas;
+
+  const getClassBackgroundColor = (className: string) => {
+    switch (className.toLowerCase()) {
       case "warrior":
         return "bg-slate-300";
       case "shaman":
         return "bg-blue-100";
-      case "DK":
+      case "dk":
         return "bg-rose-200";
       default:
         return "";
@@ -34,7 +41,8 @@ export function GearTable() {
       return 0;
     });
   }, [data, sortColumn, sortDirection]);
-  const handleSort = (column: any) => {
+
+  const handleSort = (column: keyof GearItem) => {
     if (column === sortColumn) {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {
@@ -42,6 +50,7 @@ export function GearTable() {
       setSortDirection("asc");
     }
   };
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full table-auto">
@@ -49,10 +58,10 @@ export function GearTable() {
           <tr className="bg-muted">
             <th
               className="px-4 py-3 text-left cursor-pointer hover:bg-muted-foreground/10"
-              onClick={() => handleSort("slot")}
+              onClick={() => handleSort("Slot")}
             >
               Slot{" "}
-              {sortColumn === "slot" && (
+              {sortColumn === "Slot" && (
                 <span className="ml-2">
                   {sortDirection === "asc" ? "\u2191" : "\u2193"}
                 </span>
@@ -82,10 +91,10 @@ export function GearTable() {
             </th>
             <th
               className="px-4 py-3 text-left cursor-pointer hover:bg-muted-foreground/10"
-              onClick={() => handleSort("bis")}
+              onClick={() => handleSort("BIS")}
             >
               BIS{" "}
-              {sortColumn === "bis" && (
+              {sortColumn === "BIS" && (
                 <span className="ml-2">
                   {sortDirection === "asc" ? "\u2191" : "\u2193"}
                 </span>

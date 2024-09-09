@@ -24,12 +24,12 @@ export function GearTable() {
       case "dk":
         return "bg-rose-200";
       default:
-        return "";
+        return "bg-zinc-200";
     }
   };
 
   const getBorderClass = (bis: boolean) => {
-    return bis ? "border-8 border-yellow-300" : "";
+    return bis ? "border-4 border-green-500" : "";
   };
 
   const sortedData = useMemo(() => {
@@ -106,7 +106,7 @@ export function GearTable() {
           {sortedData.map((item, index) => (
             <tr
               key={index}
-              className={`border-b hover:bg-muted/10 ${
+              className={`border-b-3 hover:bg-muted/10 ${
                 index % 2 === 0 ? "bg-muted/5" : ""
               } ${getClassBackgroundColor(item.class)} ${getBorderClass(
                 item.BIS
@@ -114,7 +114,7 @@ export function GearTable() {
             >
               <td className="px-4 py-3">{item.Slot}</td>
               <td className="px-4 py-3">{item.Dungeon}</td>
-              <td className="px-4 py-3">{item.class}</td>
+              <td className="px-4 py-3">{item.class.toUpperCase()}</td>
               <td className="px-4 py-3">{item.BIS ? "✅" : "❌"}</td>
             </tr>
           ))}

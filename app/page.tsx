@@ -1,4 +1,5 @@
 import { GearTable } from "@/components/component/gear-table";
+import { DungeonTable } from "@/components/dungeon-table";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <DungeonTable />
       </div>
       <div className="w-2/4 m-auto border-solid border-blue-200 border-2 mt-12 p-4 rounded-md shadow-md bg-blue-100">
         <h2 className="text-xl font-bold mb-4">Gear Tracker</h2>

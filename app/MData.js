@@ -112,12 +112,6 @@ export default [
   },
   {
     Slot: "Mace",
-    Dungeon: "The Stonebreaker",
-    BIS: false,
-    class: "DK",
-  },
-  {
-    Slot: "Mace",
     Dungeon: "Siege of Boralus",
     BIS: false,
     class: "DK",

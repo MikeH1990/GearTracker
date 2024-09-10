@@ -23,7 +23,7 @@ export function ClassItemFilters({
   selectedItem,
   setSelectedItem,
 }: ClassItemFiltersProps) {
-  const classes = ["All Classes", "Warrior", "DK", "Shaman"];
+  const classes = ["All Classes", "Warrior", "DK", "Shaman", "plate"];
   const items = [
     "All Items",
     "Head",

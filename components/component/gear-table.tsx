@@ -10,7 +10,12 @@ interface GearItem {
   BIS: boolean;
 }
 
-export function GearTable() {
+interface GearTableProps {
+  classFilter: string;
+  slotFilter: string;
+}
+
+export function GearTable({ classFilter, slotFilter }: GearTableProps) {
   const [sortColumn, setSortColumn] = useState<keyof GearItem>("Slot");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const data: GearItem[] = datas;
@@ -32,15 +37,26 @@ export function GearTable() {
     return bis ? "border-4 border-green-200" : "";
   };
 
+  const filteredData = useMemo(() => {
+    return data.filter((item) => {
+      return (
+        (classFilter === "All Classes" ||
+          item.class.toLowerCase() === classFilter.toLowerCase()) &&
+        (slotFilter === "All Items" ||
+          item.Slot.toLowerCase() === slotFilter.toLowerCase())
+      );
+    });
+  }, [data, classFilter, slotFilter]);
+
   const sortedData = useMemo(() => {
-    return [...data].sort((a, b) => {
+    return [...filteredData].sort((a, b) => {
       if (a[sortColumn] < b[sortColumn])
         return sortDirection === "asc" ? -1 : 1;
       if (a[sortColumn] > b[sortColumn])
         return sortDirection === "asc" ? 1 : -1;
       return 0;
     });
-  }, [data, sortColumn, sortDirection]);
+  }, [filteredData, sortColumn, sortDirection]);
 
   const handleSort = (column: keyof GearItem) => {
     if (column === sortColumn) {

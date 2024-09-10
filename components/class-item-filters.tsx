@@ -32,13 +32,16 @@ export function ClassItemFilters({
     "Back",
     "Chest",
     "Wrist",
-    "Gloves",
-    "Belt",
+    "Hands",
+    "Waist",
     "Legs",
-    "Boots",
-    "Ring",
+    "Feet",
+    "Finger",
     "Trinket",
-    "Weapons",
+    "Two Handed",
+    "One Handed",
+    "Staff",
+    "Shield",
   ];
 
   return (
